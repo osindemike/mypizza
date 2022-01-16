@@ -13,60 +13,107 @@
   <script src="js/scripts.js"></script>
   <title>Piece-A-Pizza</title>
 </head>
-<div class="page1">
-</div>
-<div class="aboutus">
-  <div class="row">
-    <h2 style="text-align: center;">ABOUT US</h2>
-    <div class="col-md-6">
-      <br>
-      <p>Welcome to BoA Pizza your home of the tastiest and most delicious Pizza. Established in 2019, we rely on a creative menu ensuring you get an experience like no other pizza that will leave you craving for more. Nothing beats a hot fresh out of the oven slice of Pizza!! </p>
-    </div>
-    <div class="col-md-6">
-      <img src="/images/beef-pizza.jpg" alt="Pizza" height="300px" width="500px"> 
-    </div>
-  </div>
-</div>
-<div class="menu">
-  <h2 style="text-align: center;">MENU</h2>
-  <div class="row" id="menuitems">
-    <div class="col-md-3" id="pizza1">
-      <p id="slide1">PEPPERONI</p>
-      <img src="/images/pepperoni-pizza.jpg" alt="item1" height="200px" width="250px" id="menu1">
-    </div>
-    <div class="col-md-3" id="pizza2">
-      <p id="slide2">TOMATO PIZZA</p>
-      <img src="/images/tomato-pizza.jpg" alt="item2" height="200px" width="250px" id="menu2">
-    </div>
-    <div class="col-md-3" id="pizza3">
-      <p id="slide3">VEGETABLE PIZZA</p>
-      <img src="/images/vegetable-pizza.jpg" alt="item3" height="200px" width="250px" id="menu3">
-    </div>
-    <div class="col-md-3" id="pizza4">
-      <p id="slide4">LOADED CHEESE</p>
-      <img src="/images/loaded-cheese.jpg" alt="item4" height="200px" width="250px" id="menu4">
-    </div>
-  </div>
-  <div class="row" id="menuitems">
-    <div class="col-md-3" id="pizza5">
-      <p id="slide5">ORGANIC PIZZA</p>
-      <img src="/images/organic-pizza.jpg" alt="item5" height="200px" width="250px">
-    </div>
-    <div class="col-md-3" id="pizza6">
-      <p id="slide6">BARBEQUE PIZZA</p>
-      <img src="/images/barbeque-pizza.jpg" alt="item6" height="200px" width="250px">
-    </div>
-    <div class="col-md-3" id="pizza7">
-      <p id="slide7">FURNACE PIZZA</p>
-      <img src="/images/furnace-pizza.jpg" alt="item7" height="200px" width="250px">
-    </div>
-    <div class="col-md-3" id="pizza8">
-      <p id="slide8">BEEF PIZZA</p>
-      <img src="/images/beef-pizza.jpg" alt="item8" height="200px" width="250px">
-    </div>
-  </div>
-</div>
 <body>
+  <div class="page1">
+  </div>
+  <div class="aboutus">
+    <div class="row">
+      <h2 style="text-align: center;">ABOUT US</h2>
+      <div class="col-md-6">
+        <br>
+        <p>Welcome to BoA Pizza your home of the tastiest and most delicious Pizza. Established in 2019, we rely on a creative menu ensuring you get an experience like no other pizza that will leave you craving for more. Nothing beats a hot fresh out of the oven slice of Pizza!! </p>
+      </div>
+      <div class="col-md-6">
+        <img src="/images/beef-pizza.jpg" alt="Pizza" height="300px" width="500px"> 
+      </div>
+    </div>
+  </div>
+  <div class="menu">
+    <h2 style="text-align: center;">MENU</h2>
+    <div class="row" id="menuitems">
+      <div class="col-md-3" id="pizza1">
+        <p id="slide1">PEPPERONI</p>
+        <img src="/images/pepperoni-pizza.jpg" alt="item1" height="200px" width="250px" id="menu1">
+      </div>
+      <div class="col-md-3" id="pizza2">
+        <p id="slide2">TOMATO PIZZA</p>
+        <img src="/images/tomato-pizza.jpg" alt="item2" height="200px" width="250px" id="menu2">
+      </div>
+      <div class="col-md-3" id="pizza3">
+        <p id="slide3">VEGETABLE PIZZA</p>
+        <img src="/images/vegetable-pizza.jpg" alt="item3" height="200px" width="250px" id="menu3">
+      </div>
+      <div class="col-md-3" id="pizza4">
+        <p id="slide4">LOADED CHEESE</p>
+        <img src="/images/loaded-cheese.jpg" alt="item4" height="200px" width="250px" id="menu4">
+      </div>
+    </div>
+    <div class="row" id="menuitems">
+      <div class="col-md-3" id="pizza5">
+        <p id="slide5">ORGANIC PIZZA</p>
+        <img src="/images/organic-pizza.jpg" alt="item5" height="200px" width="250px">
+      </div>
+      <div class="col-md-3" id="pizza6">
+        <p id="slide6">BARBEQUE PIZZA</p>
+        <img src="/images/barbeque-pizza.jpg" alt="item6" height="200px" width="250px">
+      </div>
+      <div class="col-md-3" id="pizza7">
+        <p id="slide7">FURNACE PIZZA</p>
+        <img src="/images/furnace-pizza.jpg" alt="item7" height="200px" width="250px">
+      </div>
+      <div class="col-md-3" id="pizza8">
+        <p id="slide8">BEEF PIZZA</p>
+        <img src="/images/beef-pizza.jpg" alt="item8" height="200px" width="250px">
+      </div>
+    </div>
+  </div>
+  <div class="checkout">
+    <h2 style="text-align: center;">CHECKOUT</h2>
+    <h3>Make your order from the options below!!!</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <form action="">
+          <label for="select">Choose a Flavor</label>
+          <select name="flavor" id="flavor" class="form-control">
+            <option value="Pepperoni Pizza">Pepperoni Pizza</option>
+            <option value="Tomato Pizza">Tomato Pizza</option>
+            <option value="Loaded cheese">Loaded Cheese</option>
+            <option value="Furnace Pizza">Furnace Pizza</option>
+            <option value="Beef Pizza">Beef Pizza</option>
+            <option value="Vegetable Pizza">Vegetable Pizza</option>
+            <option value="Barbeque Pizza">Barbeque Pizza</option>
+            <option value="Organic Pizza">Organic Pizza</option>
+          </select>
+          <label for="select">Select Pizza Size</label>
+          <select name="size" id="size" class="form-control">
+            <option selected value="0">Choose Pizza Size!</option>
+            <option value="small">Small.....Kshs. 1000</option>
+            <option value="medium">Medium.....Kshs. 1200</option>
+            <option value="large">Large.....Kshs. 1500</option>
+          </select>
+          <label for="select">Select Pizza crust</label>
+          <select name="crust" id="crust" class="form-control">
+            <option selected value="0">Choose a crust!</option>
+            <option value="Crispy">Crispy</option>
+            <option value="Stuffed">Stuffed</option>
+            <option value="Gluten-free">Gluten-free</option>
+          </select>
+          <label for="select">Select Pizza Toppings</label>
+          <select name="toppings" id="toppings" class="form-control">
+            <option value="bacon">Bacon</option>
+            <option value="pineapple">Pineapple</option>
+            <option value="sausage">Sausage</option>
+            <option value="carmelized onions">Carmelized onions</option>
+            <option value="olives">Olives</option>
+            <option value="Mushrooms">Mushrooms</option>
+          </select>
+          <br>
+          <button type="submit" class="btn btn-orange Submit">Submit</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
   
 </body>
 </html>
