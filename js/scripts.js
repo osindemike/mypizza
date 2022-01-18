@@ -1,6 +1,9 @@
 // business logic
 var price;
-function pizza(size, crust, toppings, amount, totalprice){
+var crustPrice;
+var toppingsPrice;
+function pizza(flavor, size, crust, toppings, amount, totalprice){
+this.flavor=flavor
 this.size=size;
 this.crust=crust;
 this.toppings=toppings;
@@ -64,3 +67,45 @@ $(document).ready(function(){
   });
 });
 // submit 
+$(document).ready(function(){
+  $("button.submit").click(function (event){
+    let pizzaFlavor= $("#flavor option:selected").val();
+    let pizzaSize= $("#size option:selected").val();
+    let pizzaCrust= $("#crust option:selected").val();
+    let pizzaToppings= [];
+    $.each($("input[name='toppings']:checked"), function(){
+      pizzaToppings.push($(this).val());
+    });
+    switch(pizzaSize){
+      case "small":
+        price = 1000;
+        break;
+      case "medium":
+        price = 1200;
+        break;
+      case "large":
+        price = 1500;
+        break;
+      case "0":
+        price = 0;
+        break;
+    }
+    switch(pizzaCrust){
+      case "0":
+        crustPrice = 0;
+        break;
+      case "Crispy":
+        crustPrice = 100;
+        break;
+      case "Stuffed":
+        crustPrice = 100;
+        break;
+      case "Gluten-free":
+        crustPrice = 100;
+        break;
+    }
+    let amountToppings = pizzaToppings*100;
+    total = price + crustPrice + amountToppings;
+    console.log(total);
+  });
+});

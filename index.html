@@ -116,11 +116,58 @@
             <label for="Cheddar" class="custom-control-label">Cheddar</label>
           </div>
           <br>
-          <button type="submit" class="btn btn-orange Submit">Submit</button>
-
+          <button type="submit" class="btn btn-orange Submit">Next</button>
         </form>
       </div>
     </div>
+  </div>
+  <div class="col-md-6">
+    <div class="message" id="order-message">
+      <p>Your oder will be delivered ASAP</p>
+    </div>
+    <div class="customerdetails">
+      <h3>Your Order</h3>
+      <div id="yourorder">
+        <table class="table table-md ordertable">
+          <thead>
+            <tr>
+              <th scope="col">Flavor</th>
+              <th scope="col">Size</th>
+              <th scope="col">Crust</th>
+              <th scope="col">Toppings</th>
+              <th scope="col">Total cost</th>
+            </tr>
+          </thead>
+          <tbody id="specificorder">
+            <tr>
+              <td id="pizza-flavour"></td>
+              <td id="pizza-size"></td>
+              <td id="pizza-crust"></td>
+              <td id="pizza-toppings"></td>
+              <td id="total-price"></td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="sumpizza"></p>
+        <p id="amounttotal"></p>
+        <p id="deliveryprice">Delivery is Ksh 200</p>
+      </div>
+      <button class="btn btn-orange addOrder">Add Order</button>
+      <button class="btn btn-orange" id="checkout">Checkout</button>
+      <button class="btn btn-orange deliver">Need a Delivery?</button>
+    </div>
+    <div class="delivery">
+      <form action="">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Name" class="form-control mb-3">
+          <input type="number" id="phone" placeholder="Telephone" class="form-control mb-3">
+          <input type="text" id="location" placeholder="Delivery Location" class="form-control mb-3">
+          <button class="btn btn-orange" id="final-submission">Order</button>
+        </div>
+      </form>
+    </div>
+
+
   </div>
   
 </body>
