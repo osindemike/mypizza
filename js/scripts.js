@@ -68,7 +68,7 @@ $(document).ready(function(){
 });
 // submit 
 $(document).ready(function(){
-  $("button.submit").click(function (event){
+  $("button.next").click(function (event){
     let pizzaFlavor= $("#flavor option:selected").val();
     let pizzaSize= $("#size option:selected").val();
     let pizzaCrust= $("#crust option:selected").val();
@@ -104,8 +104,55 @@ $(document).ready(function(){
         crustPrice = 100;
         break;
     }
-    let amountToppings = pizzaToppings*100;
+    let amountToppings = pizzaToppings.length*100;
+    if (pizzaSize == "" && pizzaCrust == ""){
+      $("div.customerdetails").hide();
+      alert("Kindly make an order selection");
+    } else {
+      $("button.next").hide();
+      $("#order-message").hide();
+      $("div.customerdetails").slideDown(1000);
+    }
     total = price + crustPrice + amountToppings;
     console.log(total);
+    let amountCheckout = 0;
+    amountCheckout = amountCheckout +total;
+    $("#pizza-flavour").html($(".name option:selected").val());
+    $("#pizza-size").html($("#size option:selected").val());
+    $("#pizza-crust").html($("#crust option:selected").val());
+    $("#pizza-toppings").html(pizzaToppings.join(", "));
+    $("#total-price").html(total);
   });
 });
+$("button.addAnotherOrder").click(function(){
+  let pizzaFlavor= $("#flavor option:selected").val();
+    let pizzaSize= $("#size option:selected").val();
+    let pizzaCrust= $("#crust option:selected").val();
+    let pizzaToppings= [];
+    $.each($("input[name='toppings']:checked"), function(){
+      pizzaToppings.push($(this).val());
+    });
+  });
+  let amountToppings = pizzaToppings.length*100;
+  total=price + crustPrice + amountToppings;
+  amountCheckout = amountCheckout +total;
+  var anotherOrder = new pizza(pizzaFlavor, pizzaSize, pizzaCrust, pizzaToppings, total);
+$("button#checkout").click(function(){
+  $("button#checkout").hide();
+  $("button.addAnotherOrder").hide();
+  $("button.deliver").slideDown(1000);
+  $("#sumpizza").append("The total to be paid is ksh. " +amountCheckout);
+
+});
+$("button.deliver").click(function(){
+  $(".ordertable").hide();
+  $(".customerdetails h3").hide();
+  $(".delivery").slideDown(1000);
+  $("#deliveryprice").hide();
+  $("button.deliver").hide();
+  $("#sumpizza").hide();
+  $("button.addAnotherOrder").hide();
+  let deliveryAmount = amountCheckout+200;
+  $("#amounttotal").append("Total amount to be paid is: " +deliveryAmount)
+});
+
