@@ -37,4 +37,8 @@
   align-items: center;
   padding-left: 10%;
   padding-right: 10%;
+  background-color: rgba(165, 42, 42, 0.61);
+}
+.menu, .aboutus{
+  background-color: rgba(165, 42, 42, 0.61);
 }

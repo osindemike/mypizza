@@ -63,3 +63,4 @@ $(document).ready(function(){
     $("#slide8").hide();
   });
 });
+// submit 
