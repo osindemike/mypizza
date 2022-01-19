@@ -168,6 +168,12 @@ $("button#final-submission").click(function (event){
   let location = $("input#location").val();
   if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
     $("#delivery-prompt").append("Hello, " + customer, + "Thank you for choosing to shop with us. Your order will be delivered to " +location + "within the next 30 minutes. In case of any issues dont hesitate to contact us. Have a lovely day :)" );
-    $("")
+    $("#amounttotal").hide();
+    $("#delivery-prompt").slideDown(1200);
+  } else {
+    alert("Kindly select a location to be delivered!")
+    $(".delivery").show();
+    $("button#final-submission").show();
   }
-}
+  });
+  
