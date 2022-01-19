@@ -6,6 +6,6 @@ Project description : This is a website for my Pizza Place including different t
 
 Project setup instructions : Languages used in the build were html and javascript/jQuery with css used for the additional styling.
 
-link to live site on GitHub Pages :
+link to live site on GitHub Pages : https://osindemike.github.io/mypizza/
 
 copyright and license information : Michael Osinde, 2021
