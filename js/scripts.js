@@ -156,3 +156,10 @@ $("button.deliver").click(function(){
   $("#amounttotal").append("Total amount to be paid is: " +deliveryAmount)
 });
 
+$("button#final-submission").click(function (event){
+  event.preventDefault();
+  $("#sumpizza").hide();
+  $(".delivery").hide();
+  $("button#final-submission").hide();
+  $("button#checkout").hide();
+}
