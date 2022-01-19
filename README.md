@@ -1,4 +1,4 @@
-Project name : Piece-A-Pizza
+Project name : BoA Pizza
 
 Author name : Michael Osinde
 
@@ -8,4 +8,4 @@ Project setup instructions : Languages used in the build were html and javascrip
 
 link to live site on GitHub Pages : https://osindemike.github.io/mypizza/
 
-copyright and license information : Michael Osinde, 2021
+copyright and license information : Michael Osinde, 2022
