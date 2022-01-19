@@ -162,4 +162,12 @@ $("button#final-submission").click(function (event){
   $(".delivery").hide();
   $("button#final-submission").hide();
   $("button#checkout").hide();
+  let deliveryAmount = amountCheckout+200;
+  let customer = $("input#name").val();
+  let phone = $("input#phone").val();
+  let location = $("input#location").val();
+  if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
+    $("#delivery-prompt").append("Hello, " + customer, + "Thank you for choosing to shop with us. Your order will be delivered to " +location + "within the next 30 minutes. In case of any issues dont hesitate to contact us. Have a lovely day :)" );
+    $("")
+  }
 }
