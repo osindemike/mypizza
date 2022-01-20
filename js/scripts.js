@@ -68,7 +68,6 @@ function Getpizza( name,size,crust,topping,total ){
 }
 
 $(document).ready(function(){
- 
   $("button.proceed").click(function(event){
    let pizzaname = $(".name option:selected").val();
    let pizzasize = $("#size option:selected").val();
@@ -157,7 +156,7 @@ $(document).ready(function(){
       $("button.deliver").slideDown(1000);
       $("#deliveryfee").slideDown(1000);
       console.log("Total to be paid is ksh. "+amountCheckout);
-      $("#pizzafee").append("Total to be paid is ksh. "+amountCheckout);
+      $("#pizzafee").append("Total amount to be paid is ksh. "+amountCheckout);
     });
 
     $("button.deliver").click(function(){
