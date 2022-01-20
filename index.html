@@ -74,7 +74,7 @@
       <div class="col-md-6">
         <form action="">
           <label for="select">Choose a Flavor</label>
-          <select name="flavor" id="flavor" class="form-control">
+          <select class="browser-default custom-select custom-select-md mb-3 name">
             <option value="Pepperoni Pizza">Pepperoni Pizza</option>
             <option value="Tomato Pizza">Tomato Pizza</option>
             <option value="Loaded cheese">Loaded Cheese</option>
@@ -84,51 +84,53 @@
             <option value="Barbeque Pizza">Barbeque Pizza</option>
             <option value="Organic Pizza">Organic Pizza</option>
           </select>
+          <br>
           <label for="select">Select Pizza Size</label>
-          <select name="size" id="size" class="form-control">
+          <select class="browser-default custom-select custom-select-md mb-3" id="size" >
             <option selected value="0">Choose Pizza Size!</option>
             <option value="small">Small.....Kshs. 1000</option>
             <option value="medium">Medium.....Kshs. 1200</option>
             <option value="large">Large.....Kshs. 1500</option>
           </select>
-          <label for="select">Select Pizza crust</label>
-          <select name="crust" id="crust" class="form-control">
+          <br>
+          <label for="crust">Select Pizza crust</label>
+          <select class="browser-default custom-select custom-select-md mb-3" id="crust" >
             <option selected value="0">Choose a crust!</option>
             <option value="Crispy">Crispy.....Kshs. 100</option>
-            <option value="Stuffed">Stuffed.....Kshs. 100</option>
-            <option value="Gluten-free">Gluten-free.....Kshs. 100</option>
+            <option value="Stuffed">Stuffed.....Kshs. 150</option>
+            <option value="Gluten-free">Gluten-free.....Kshs. 200</option>
           </select>
-          <label for="toppings">Select Pizza Toppings @ Kshs 100 each</label>
+          <label for="Toppings">Select Pizza Toppings @ Kshs 100 each</label>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input type="checkbox" class="custom-control-input" id="Bacon" name="Bacon" value="Bacon">
+            <input type="checkbox" class="custom-control-input" id="Bacon" name="toppings" value="Bacon">
             <label for="Bacon" class="custom-control-label">Bacon</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input type="checkbox" class="custom-control-input" id="Mushrooms" name="Mushrooms" value="Mushrooms">
+            <input type="checkbox" class="custom-control-input" id="Mushrooms" name="toppings" value="Mushrooms">
             <label for="Mushrooms" class="custom-control-label">Mushrooms</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input type="checkbox" class="custom-control-input" id="Olives" name="Olives" value="Olives">
+            <input type="checkbox" class="custom-control-input" id="Olives" name="toppings" value="Olives">
             <label for="Olives" class="custom-control-label">Olives</label>
           </div>
           <div class="custom-control custom-checkbox custom-control-inline">
-            <input type="checkbox" class="custom-control-input" id="Cheddar" name="Cheddar" value="Cheddar">
+            <input type="checkbox" class="custom-control-input" id="Cheddar" name="toppings" value="Cheddar">
             <label for="Cheddar" class="custom-control-label">Cheddar</label>
           </div>
           <br>
-          <button type="submit" class="btn btn-orange next">Next</button>
+          <button type="submit" class="btn proceed">Continue</button>
         </form>
       </div>
     </div>
   </div>
   <div class="col-md-6">
-    <div class="message" id="order-message">
-      <p>Your oder will be delivered ASAP</p>
+    <div id="deliveryino">
+      <p>Your order will be delivered ASAP</p>
     </div>
-    <div class="customerdetails">
-      <h3>Your Order</h3>
-      <div id="yourorder">
-        <table class="table table-md ordertable">
+    <div class="order-summary">
+      <h3>Your Order Summary</h3>
+      <div id="your-orders">
+        <table class="table table-md ordersummaries">
           <thead>
             <tr>
               <th scope="col">Flavor</th>
@@ -138,24 +140,26 @@
               <th scope="col">Total cost</th>
             </tr>
           </thead>
-          <tbody id="specificorder">
+          <tbody id="ordersmade">
             <tr>
-              <td id="pizza-flavour"></td>
-              <td id="pizza-size"></td>
-              <td id="pizza-crust"></td>
-              <td id="pizza-toppings"></td>
-              <td id="total-price"></td>
+              <td id="pizzaname"></td>
+              <td id="pizzasize"></td>
+              <td id="pizzacrust"></td>
+              <td id="pizzatopping"></td>
+              <td id="totals"></td>
             </tr>
           </tbody>
         </table>
-        <p id="sumpizza"></p>
-        <p id="amounttotal"></p>
-        <p id="deliveryprice">Delivery is Ksh 200</p>
-        <p id="delivery-prompt"></p>
+        <p id="pizzafee"></p>
+        <p id="totalamount"></p>
+        <p id="deliveryfee">We offer delivery services to all regions at a standard fee of Ksh. 200</p>
+        <p id="feedbackmessage"></p>
       </div>
-      <button class="btn btn-orange addAnotherOrder">Add Order</button>
-      <button class="btn btn-orange" id="checkout">Checkout</button>
-      <button class="btn btn-orange deliver">Need a Delivery?</button>
+      <button class="btn btn-success addtoorder">Add To Order</button>
+      <button class="btn btn-success" id="checkout">Checkout</button>
+      <br>
+      <br>
+      <button class="btn btn-success deliver">Delivery</button>
     </div>
     <div class="delivery">
       <form action="">
@@ -163,13 +167,18 @@
           <input type="text" id="name" placeholder="Name" class="form-control mb-3">
           <input type="number" id="phone" placeholder="Telephone" class="form-control mb-3">
           <input type="text" id="location" placeholder="Delivery Location" class="form-control mb-3">
-          <button class="btn btn-orange" id="final-submission">Order</button>
+          <button class="btn" id="final-submit">Order</button>
         </div>
       </form>
     </div>
 
 
   </div>
-  
+  <script>
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+  </script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
