@@ -1,4 +1,4 @@
-// business side logic
+// business logic
 $(document).ready(function(){
   $("#pizza1").mouseover(function(){
     $("#slide1").show();
@@ -56,7 +56,7 @@ $(document).ready(function(){
   });
 });
 
-//customer side logic
+//customer logic
 var price , crustPrice, toppingPrice ;
 let total = 0;
 function Getpizza( name,size,crust,topping,total ){
